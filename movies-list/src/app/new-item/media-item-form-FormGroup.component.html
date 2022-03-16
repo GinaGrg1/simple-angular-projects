@@ -1,0 +1,42 @@
+<!-- Model driven -->
+<header>
+    <h2>Search Media to Watch</h2>
+  </header>
+  <form [formGroup]="form"
+        (ngSubmit)="onSubmit(form.value)">
+    <ul>
+      <li>
+        <label for="medium">Medium</label>
+        <select name="medium" formControlName="medium" id="medium">
+          <option *ngFor="let medium of lookupLists.mediums" [value]="medium">{{ medium }}</option>
+        </select>
+      </li>
+      <li>
+        <label for="name">Name</label>
+        <input type="text" formControlName="name" id="name">
+        <div *ngIf="form.get('name').hasError('pattern')" class="error">
+            Invalid Name!
+        </div>
+      </li>
+      <li>
+        <label for="category">Category</label>
+        <select formControlName="category" id="category">
+          <option value="Action">Action</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <option value="Horror">Horror</option>
+          <option value="Romance">Romance</option>
+        </select>
+      </li>
+      <li>
+        <label for="year">Year</label>
+        <input type="text" formControlName="year" id="year" maxlength="4">
+        <div *ngIf="form.get('year').errors as yearErrors" class="error">
+            Year should be between {{ yearErrors['year'].min }} and {{ yearErrors['year'].max }}
+        </div>
+      </li>
+    </ul>
+    <!-- If any field in form is invalid, disable the button -->
+    <button type="submit" [disabled]="!form.valid">Save</button>
+  </form>
