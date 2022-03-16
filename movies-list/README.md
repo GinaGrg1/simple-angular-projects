@@ -7,4 +7,4 @@ Simple Angular project to display Movie list
 
 ### Add New Entry
 
-<img src="https://raw.githubusercontent.com/GinaGrg1/simple-angular-projects/main/movies-list/pics/add.png" width="350" height="350">
+<img src="https://raw.githubusercontent.com/GinaGrg1/simple-angular-projects/main/movies-list/pics/add.png" width="550" height="350">
