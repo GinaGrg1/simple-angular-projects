@@ -1,6 +1,3 @@
 ## Simple Angular project to display Movie list
 
-
-![main](https://user-images.githubusercontent.com/29925028/158613502-6863db1d-c216-438f-98c9-7c55a14dcafb.png)
-
 [[https://raw.githubusercontent.com/GinaGrg1/simple-angular-projects/main/movies-list/pics/main.png|width=90px]]
